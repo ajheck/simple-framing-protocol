@@ -43,7 +43,7 @@ ifeq ($(OS_CMDS),WIN)
     RM = del /F /Q 
     RMDIR = -RMDIR /S /Q
     MKDIR = -mkdir
-    ERRIGNORE = 2>NUL || true
+    ERRIGNORE = 2>NUL
     SEP=\\
 else
     RM = rm -rf 
@@ -67,7 +67,7 @@ endif
 define generateRules
 $(1)/%.o: %.c
 	@echo Building $$@
-	$(HIDE)$(CC) -c $$(INCLUDES) -o $$(subst /,$$(PSEP),$$@) $$(subst /,$$(PSEP),$$<) -MMD -Werror
+	$(HIDE)$(CC) -c $$(INCLUDES) -o $$(subst /,$$(PSEP),$$@) $$(subst /,$$(PSEP),$$<) -MMD -Werror -Wall -Wextra
 endef
 
 .PHONY: all clean directories 

@@ -36,7 +36,7 @@ MU_TEST_SUITE(test_sfp_crc) {
     MU_RUN_TEST(test_sfp_crc_againstKnownValues);
 }
 
-int main(int argc, char *argv[])
+int main(void)
 {
     MU_RUN_SUITE(test_sfp_crc_init);
     MU_RUN_SUITE(test_sfp_crc);
