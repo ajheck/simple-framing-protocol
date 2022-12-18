@@ -1,7 +1,10 @@
 # Set project directory one level above of Makefile directory. $(CURDIR) is a GNU make variable containing the path to the current working directory
-PROJDIR := $(realpath $(CURDIR)/..)
+PROJDIR := $(realpath ..)
 SOURCEDIR := $(PROJDIR)
 BUILDDIR := $(PROJDIR)/build
+
+$(info    SOURCEDIR is $(SOURCEDIR))
+$(info    BUILDDIR is $(BUILDDIR))
 
 # Name of the final executable
 TARGET = sfp_test.exe

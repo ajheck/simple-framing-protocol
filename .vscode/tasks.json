@@ -3,10 +3,12 @@
         {
             "label": "Make clean",
             "command": "make",
-            "args": ["clean"],
-            "options": {
-                "cwd": "${workspaceFolder}/build"
-            },
+            "args":
+            [
+                "-C",
+                "${workspaceFolder}/build",
+                "clean",
+            ],
         },
         {
             "type": "cppbuild",
